@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <h1>Welcome to the File Upload App</h1>
+    <% if (user) { %>
+        <p>Hello, <%= user %>!</p>
+        <div>
+            <a href="/upload">Go to Upload</a>
+            <a href="/news">Read News</a>
+            <a href="/logout">Logout</a>
+        </div>
+        <% } else { %>
+            <div>
+                <a href="/register">Register</a>
+                <a href="/login">Login</a>
+            </div>
+            <% } %>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <h1>Latest News</h1>
+    <ul>
+        <% articles.forEach(article=> { %>
+            <li>
+                <h2>
+                    <%= article.title %>
+                </h2>
+                <p>
+                    <%= article.description %>
+                </p>
+                <a href="<%= article.url %>" target="_blank">Read more</a>
+            </li>
+            <% }); %>
+    </ul>
+    <div>
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+
+</html>
